@@ -1,0 +1,4 @@
+MAGCircleDiagram
+================
+
+Circle diagram view
