@@ -47,9 +47,11 @@ static const CFTimeInterval kAnimationDuration = 1.0;
     self.preferedSize = [self.backgroundImage size];
     self.progressImageSize = [self.progressImage size];
     self.layer.contents = (__bridge id)[self backgroundImage].CGImage;
+    self.layer.contentsScale = self.backgroundImage.scale;
     self.layer.masksToBounds = YES;
     self.progressLayer = [CALayer new];
     self.progressLayer.contents = (__bridge id)[self progressImage].CGImage;
+    self.progressLayer.contentsScale = self.layer.contentsScale;
     self.progressLayer.frame = self.bounds;
     [self.layer addSublayer:self.progressLayer];
     
